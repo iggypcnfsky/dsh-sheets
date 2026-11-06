@@ -1,0 +1,66 @@
+{
+  "name": "@iggylove/dsh-sheets",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Agent-writable spreadsheet and table editor for DeepSeek Harness, with formulas, formatting, CSV/Excel import, and export.",
+  "author": {
+    "name": "Iggy Love",
+    "email": "hey@iggy.love",
+    "url": "https://iggy.love"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/iggypcnfsky/dsh-sheets#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iggypcnfsky/dsh-sheets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iggypcnfsky/dsh-sheets/issues"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "spreadsheet",
+    "tables",
+    "formulas",
+    "xlsx",
+    "csv"
+  ],
+  "engines": {
+    "dsh": ">=0.2.2-0 <0.3.0-0",
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./icon.png": "./icon.png",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "icon.png",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "dependencies": {
+    "xlsx": "0.18.5"
+  }
+}
